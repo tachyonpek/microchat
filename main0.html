@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.bcomment {
+    font-family: verdana;
+}
+.incht {
+    font-size: 20px;
+    color: green;
+    border: 7px solid #777;
+    border-radius: 11px;
+}
+</style>
+</head>
+
+<body>
+
+<p>A script on this page starts this clock:</p>
+<div id="chw" class="incht"></div>
+
+<script>
+var myVar = setInterval(loadX, 4000);
+document.getElementById("chw").innerHTML = "<p>Loading chat text...</p>";
+
+function myTimer() {
+    var d = new Date();
+    var t = d.toLocaleTimeString();
+    document.getElementById("chw").innerHTML = t;
+}
+function loadX() {
+  var d = new Date();
+  var t = d.toLocaleTimeString();
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("chw").innerHTML =
+      "<p>" + this.responseText + t + "</p>" ;
+    }
+  };
+
+  xhttp.open("GET", "aa40.txt", true);
+  xhttp.setRequestHeader('cache-control', 'no-cache, must-revalidate, post-check=0, pre-check=0');
+  xhttp.setRequestHeader('cache-control', 'max-age=0');
+  xhttp.setRequestHeader('expires', '0');
+  xhttp.setRequestHeader('expires', 'Tue, 01 Jan 1980 1:00:00 GMT');
+  xhttp.setRequestHeader('pragma', 'no-cache');
+  xhttp.send();
+}
+
+</script>
+
+</body>
+</html>

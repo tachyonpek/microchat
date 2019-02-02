@@ -39,7 +39,7 @@
 </style>
 </head>
 
-<body>
+<body onresize="ResizeHandlerSh()">
 
 <p>Text konverzace</p>
 <div id="chw" class="incht"></div>
@@ -89,6 +89,11 @@ function loadX() {
   xhttp.setRequestHeader('expires', 'Tue, 01 Jan 1980 1:00:00 GMT');
   xhttp.setRequestHeader('pragma', 'no-cache');
   xhttp.send();
+}
+function ResizeHandlerSh() {
+
+      document.getElementById("chw").innerHTML = "Res";
+
 }
 
 </script>

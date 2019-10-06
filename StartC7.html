@@ -157,7 +157,7 @@ body {
 <body translate="no" >
   <!-- request referrer: '' -->
   <div class="log-form">
-  <h2>Entering chat system</h2>
+  <h2>Entering private chat system</h2>
   <form>
     <input type="text" title="username" placeholder="username" />
     <input type="password" title="username" placeholder="password" />
@@ -188,6 +188,10 @@ function loadZ() {
     if (this.readyState == 4 && this.status == 200) {
       document.getElementById("chw").innerHTML =
       "<p>" + this.responseText + t + "</p>" ;
+      window.location.href = "main1.html"; 
+   // window.location.replace("main1.html"); 
+   // window.location.href = "http://www.w3schools.com";
+
     }
   };
 

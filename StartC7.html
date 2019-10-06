@@ -150,17 +150,6 @@ body {
 }
 
   </style>
-  <script>
-  window.console = window.console || function(t) {};
-</script>
-
-  
-  
-  <script>
-  if (document.location.search.match(/type=embed/gi)) {
-    window.parent.postMessage("resize", "*");
-  }
-</script>
 
 
 </head>
@@ -176,10 +165,39 @@ body {
     <a class="forgot" href="#">Forgot Username?</a>
   </form>
 </div><!--end log form -->
+<div id="chw" class="incht"></div>
   
+<!--
   <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+-->
 
   
+<script>
+document.title = "ChatXWindow";
+var myVar = setInterval(loadZ, 4000);
+var mujs = ".S";
+document.getElementById("chw").innerHTML = "<p>Loading chat text...</p>" + mujs;
+
+
+function loadZ() {
+  var d = new Date();
+  var t = d.toLocaleTimeString();
+  document.getElementById("chw").innerHTML = t + " hodin";
+
+}
+
+
+loadO();
+
+function myTimer() {
+    var d = new Date();
+    var t = d.toLocaleTimeString();
+    document.getElementById("chw").innerHTML = t + " hodin";
+}
+
+
+
+</script>
   
   
 
